@@ -56,7 +56,7 @@ npm install --global alfred-hackernews
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-To grab the top stories from [hackernews]() type the keyword `hn` in Alfred.
+To grab the top stories from [hackernews]() type the keyword `hn` in Alfred and select any of the stories to open them in your browser.
 
 ![demo](images/hn-demo.gif)
 
