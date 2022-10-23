@@ -1,14 +1,22 @@
 {
   "name": "alfred-hackernews",
   "version": "1.0.0",
-  "description": "Obtain top stories in Hackernews",
+  "description": "Search Hackernews top stories from Alfred",
+  "keywords": ["alfred", "hackernews", "workflow"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No test specified\"",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
   },
-  "author": "Kostya Farber",
+  "author": {
+    "name": "Kostya Farber",
+    "email": "kostya.farber@gmail.com",
+    "url": "https://kostyafarber.github.io/"
+  },
   "license": "ISC",
+  "type": "module",
   "dependencies": {
-    "axios": "^1.1.3"
+    "alfy": "^1.0.0"
   }
 }

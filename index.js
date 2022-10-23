@@ -1,28 +1,32 @@
-const axios = require('axios');
+import alfy from "alfy";
 
-const HACKERNEWS = 'https://hacker-news.firebaseio.com/v0/topstories.json';
+const HACKERNEWS_API = "https://hacker-news.firebaseio.com/v0/";
+const HACKERNEWS_TOP_STORIES = "topstories.json?print=pretty";
+const HACKERNEWS_URL = "https://news.ycombinator.com/item?id="
 
-let data = async () => {
-    response = await axios.get(HACKERNEWS)
-    return response
-}
+// grab top stories by id and filter for first 10
+let topStoryIds = await alfy.fetch(HACKERNEWS_API + HACKERNEWS_TOP_STORIES);
+topStoryIds = topStoryIds.slice(0, 10);
 
-ids = data()
-
-ids.then(data => {
-    console.log(data.data)
-})
+const urls = topStoryIds.map((element) => {
+  const url = HACKERNEWS_API + "item/" + element + ".json";
+  return url;
+});
 
 
-// two ways of writing functions (similar to lambda functions in Python)
-function helloWorld(whichWord) {
-    console.log(`Hello ${whichWord}`)
-}
+// grab all the articles and setup json
+const articles = await Promise.all(
+  urls.map(async (element) => {
+    const response = await alfy.fetch(element, { maxAge: 5000 });
 
-helloWorld("Australia")
+    const items = {
+      title: response.title,
+      subtitle: [response.by, response.score].join(", "),
+      arg: 'url' in response? response.url: HACKERNEWS_URL + response.id,
+    };
 
-let helloWorldArrow = whichWord => {
-    console.log(`Hello ${whichWord}`)
-}
+    return items;
+  })
+);
 
-helloWorldArrow("England")
+alfy.output(articles);
