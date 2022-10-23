@@ -14,7 +14,7 @@
     "email": "kostya.farber@gmail.com",
     "url": "https://kostyafarber.github.io/"
   },
-  "license": "ISC",
+  "license": "(MIT)",
   "type": "module",
   "dependencies": {
     "alfy": "^1.0.0"
