@@ -1,6 +1,6 @@
 {
   "name": "alfred-hackernews",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Search Hackernews top stories from Alfred",
   "keywords": ["alfred", "hackernews", "workflow"],
   "main": "index.js",
@@ -17,6 +17,6 @@
   "license": "(MIT)",
   "type": "module",
   "dependencies": {
-    "alfy": "^1.0.0"
+    "alfy": "*"
   }
 }
