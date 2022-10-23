@@ -29,7 +29,7 @@
 <h3 align="center">Alfred Hackernews</h3>
 
   <p align="center">
-    Serving up the latest news from <a href=''>hackers</a> right in <a href=''>Alfred</a>
+    Serving up the latest news from <a href='https://news.ycombinator.com/'>hackers</a> right in <a href='https://www.alfredapp.com/'>Alfred</a>
     <br />
     <a href="https://github.com/kostyafarber/alfred-hackernews"><strong>Explore the docs »</strong></a>
     <br />
@@ -44,7 +44,7 @@
 
 ### Prerequisites
 
-You need [Node,js 14+](https://nodejs.org/en/) and [Alfred]().
+You need [Node.js 14+](https://nodejs.org/en/) and [Alfred](https://www.alfredapp.com/).
 
 ### Installation
 
@@ -116,7 +116,7 @@ Project Link: [https://github.com/kostyafarber/alfred-hackernews](https://github
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 * [Waiter icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/waiter)
-* [alfy for easily building Alfred workflows in JavaScript]()
+* [alfy for easily building Alfred workflows in JavaScript](https://github.com/sindresorhus/alfy)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
